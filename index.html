@@ -7,13 +7,59 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="wrapper">
+    <div class="visuall-hidden">
+    <div class="popup">
+      <div class="popup-container">
+        <button class="popup-close" type="button">Закрыть окно</button>
+        <h2 class="popup-title">Ваш фидбек</h2>
+        <form>
+        <div class="dropdown">
+          <label>
+          <span class="dropdown-title">Как часто вы заходите на сайт?</span>
+          <select class="select">
+            <option value="almosteveryday" selected>Почти каждый день</option>
+            <option value="severaltimesaday">Несколько раз в день</option>
+            <option value="sometimes">Время от времени</option>
+          </select>
+        </label>
+        </div>
+        <div class="radio-buttons">
+          <span class="radio-buttons-title">Вы подписаны на e-mail рассылку?</span>
+          <label class="radio-group">
+            <input type="radio" class="radio" name="radio-group">
+            <span class="radio-group-text">Да</span>
+          </label>
+          <label class="radio-group">
+            <input type="radio" class="radio" name="radio-group">
+            <span class="radio-group-text">Нет</span>
+          </label>
+        </div>
+        <div class="text-area">
+          <label class="text-field">
+            <span class="text-field-title">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+            <textarea class="textarea" placeholder="Может, больше рецептов?" required></textarea>
+          </label>
+        </div>
+        <button class="send-button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+</div> 
+
 	<header class="header">
   <div class="header-content">
-  <div class="container">
-    <a href="/">
+  <div class="nav-container">
+    <a class="header-logo-link" href="/">
     <img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" class="header-logo" alt="NOEMI-LOGO">
     </a>
     <nav class="menu">
+      <div class="hamburger">
+        <input id="menu-toggle" type="checkbox" />
+    <label class="menu-btn" for="menu-toggle">
+      <span></span>
+    </label>
+    </div>
       <ul class="menu-list">
         <li class="menu-list-item"><a class="menu-link"                   href="#">Главная</a></li>
         <li class="menu-list-item"><a class="menu-link"                   href="#">Посты</a></li>
@@ -24,14 +70,57 @@
       </ul>
     </nav>
      </div>
-    
     <h1 class="welcome-container">Блог о творчестве, спорте и образе жизни</h1>
-    
   </div>
 </header>
 
+<aside class="trends-block">
+	<header class="trends-block-header">
+		<h2 class="trends-header-title">Сейчас в тренде</h2>
+	</header>
+	<div class="trends-container">
+		<article class="trend trend-plants">
+			<div class="trend-content">
+			<ul class="trend-container-tags-list">
+				<li class="trend-container-tags-list-item">Lifestyle</li>
+				<li class="trend-container-tags-list-item">Interior</li>
+			</ul>
+			<h2 class="trend-container-title">Сейчас в тренде: сад на подоконнике</h2>
+			</div>
+		</article>
+
+		<article class="trend trend-cheese">
+      <div class="trend-content">
+      <ul class="trend-container-tags-list">
+        <li class="trend-container-tags-list-item">Food</li>
+      </ul>
+      <h2 class="trend-container-title">Сыры на красивых картинках из интернета: какие они на вкус?</h2>
+      </div>
+    </article>
+
+		<article class="trend trend-mountains">
+      <div class="trend-content">
+      <ul class="trend-container-tags-list">
+        <li class="trend-container-tags-list-item">Lifestyle</li>
+        <li class="trend-container-tags-list-item">Travel</li>
+      </ul>
+      <h2 class="trend-container-title">Собираемся в первый поход в горы</h2>
+      </div>
+    </article>
+
+		<article class="trend trend-lemons">
+      <div class="trend-content">
+      <ul class="trend-container-tags-list">
+        <li class="trend-container-tags-list-item">Food</li>
+        <li class="trend-container-tags-list-item">Health</li>
+      </ul>
+      <h2 class="trend-container-title">Сколько витамина С в лимонах?</h2>
+      </div>
+    </article>
+	</div>
+</aside>
+
 <div class="body-page">
-  
 <main class="last-news-section">
   
   <div class="last-post">
@@ -238,7 +327,6 @@
 </main>
   
 <aside class="side-bar">
-  
   <div class="new-posts-block">
     <h3 class="new-posts-block-title">
       <a class="new-posts-block-title-link" href="#">
@@ -390,8 +478,83 @@
     </ul>
   </div>
 </aside>
-  
 </div>
+
+<aside class="products-block">
+
+  <header class="products-block-header">
+    <h2 class="products-block-header-title">Наши изделия</h2>
+  </header>
+
+    <div class="products-container">
+
+      <div class="product-block"> 
+        <div class="product-preview">
+          <img class="product-img" src="images/shop-item-desk1.jpg" alt="Превью товара">
+        </div>
+        <div class="product-body">
+          <h2 class="product-name">Подушки на диван</h2>
+          <div class="product-description"><p>Набор из двух подушек с модными принтами. Видео о создании здесь.</p></div>
+          <footer class="product-footer">
+          <div class="product-prices">
+            <div class="product-price product-price-old">
+              <span class="product-price-old">1000</span>
+              <span class="product-rub">₽</span>
+            </div>
+            <div class="product-price">
+              <span class="product-price-value">800</span>
+              <span class="product-rub">₽</span>
+            </div>
+          </div>
+          <button class="product-button" type="button">В магазин</button>
+        </footer>
+        </div>
+      </div>
+
+      <div class="product-block"> 
+        <div class="product-preview">
+          <img class="product-img" src="images/shop-item-desk2.jpg" alt="Превью товара">
+        </div>
+        <div class="product-body">
+          <h2 class="product-name">Кукла «Зайчик»</h2>
+          <div class="product-description"><p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена весенняя серия постов в блоге и несколько подкастов.</p></div>
+          <footer class="product-footer">
+          <div class="product-prices">
+            <div class="product-price">
+              <span class="product-price-value">3500</span>
+              <span class="product-rub">₽</span>
+            </div>
+          </div>
+          <button class="product-button" type="button">В магазин</button>
+        </footer>
+        </div>
+      </div>
+
+      <div class="product-block"> 
+        <div class="product-preview">
+          <img class="product-img" src="images/shop-item-desk3.jpg" alt="Превью товара">
+        </div>
+        <div class="product-body">
+          <h2 class="product-name">Шестиугольная рамка</h2>
+          <div class="product-description"><p>Необычная рамка для украшения дома из видео «Как сделать рамку из подручных средств за 30 минут»</p></div>
+          <footer class="product-footer">
+          <div class="product-prices">
+            <div class="product-price product-price-old">
+              <span class="product-price-old">500</span>
+              <span class="product-rub">₽</span>
+            </div>
+            <div class="product-price">
+              <span class="product-price-value">400</span>
+              <span class="product-rub">₽</span>
+            </div>
+          </div>
+          <button class="product-button" type="button">В магазин</button>
+        </footer>
+        </div>  
+      </div>
+
+    </div>
+</aside> 
 
 <footer class="footer">
   <ul class="socials-list">
@@ -415,7 +578,12 @@
       <a class="tumblr" href="#">tumb</a>
       <input class="visually-hidden" name="icon" value="Иконка tumblr">
       </li>
+       <li class="socials-list-item">
+      <a class="dribble" href="#">ball</a>
+      <input class="visually-hidden" name="icon" value="Иконка dribble">
+      </li>
   </ul>
 </footer>
+</div>
 </body>
 </html>
